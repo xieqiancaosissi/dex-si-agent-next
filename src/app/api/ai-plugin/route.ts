@@ -5,9 +5,9 @@ export async function GET() {
   const pluginData = {
     openapi: "3.0.0",
     info: {
-      title: "Ref Finance API",
+      title: "Dex Si API",
       description:
-        "API for retrieving token metadata and swapping tokens through Ref Finance.",
+        "API for retrieving token metadata and swapping tokens through Dex Si.",
       version: "1.0.0",
     },
     servers: [
@@ -20,9 +20,9 @@ export async function GET() {
     "x-mb": {
       "account-id": process.env.ACCOUNT_ID,
       assistant: {
-        name: "Ref Finance Agent",
+        name: "Dex Si Agent",
         description:
-          "An assistant that provides token metadata and swaps tokens through Ref Finance.",
+          "An assistant that provides token metadata and swaps tokens through Dex Si.",
         instructions:
           "Get information for a given fungible token or swaps one token for another. Do not modify token identifiers, they will be fuzzy matched automatically.",
         tools: [{ type: "generate-transaction" }],
@@ -33,7 +33,7 @@ export async function GET() {
         get: {
           operationId: "get-token-metadata",
           description:
-            "Get token metadata from Ref Finance. Token identifiers can be the name, symbol, or contractId and will be fuzzy matched automatically.",
+            "Get token metadata from Dex Si. Token identifiers can be the name, symbol, or contractId and will be fuzzy matched automatically.",
           parameters: [
             {
               name: "token",

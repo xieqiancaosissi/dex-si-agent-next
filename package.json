@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:agent": "next dev & make-agent dev",
-    "build": "next build",
+    "build": "next build && make-agent deploy -u https://dex-si-agent-next-cqk7.vercel.app",
     "start": "next start",
     "lint": "next lint"
   },
